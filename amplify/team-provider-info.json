@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-icoe-dev-72712-authRole",
+      "UnauthRoleArn": "arn:aws:iam::596489275888:role/amplify-icoe-dev-72712-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::596489275888:role/amplify-icoe-dev-72712-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-icoe-dev-72712-deployment",
+      "UnauthRoleName": "amplify-icoe-dev-72712-unauthRole",
+      "StackName": "amplify-icoe-dev-72712",
+      "StackId": "arn:aws:cloudformation:us-west-2:596489275888:stack/amplify-icoe-dev-72712/1d4d5ce0-6ed9-11eb-bc63-06ed1cedafa1",
+      "AmplifyAppId": "d2tlow0xfabmz2"
+    },
+    "categories": {
+      "auth": {
+        "icoebc9ad4ad": {}
+      }
+    }
+  }
+}
