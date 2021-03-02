@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "icoe",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": true,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authicoebc9ad4ad",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
