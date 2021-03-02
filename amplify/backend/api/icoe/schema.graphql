@@ -1,0 +1,46 @@
+type Principal @model
+@auth (rules: [
+    {allow: owner}]) {
+    id: ID!
+    name: String!
+    contact_info: [Contact!]! @connection(keyName: "Contacts")
+    cars: [Auto!] @connection(keyName: "Cars")
+    emergency_contacts: [EmergencyContact!] @connection(keyName: "EmergencyContacts")
+}
+
+type Auto @model
+@auth (rules: [ {allow: owner}]) {
+    id: ID!
+    name: String!
+    make: String!
+    model: String!
+    color: String!
+    year: Int!
+    plate: String!
+}
+
+enum ContactType {
+    EMAIL
+    PHONE
+}
+
+type Contact @model
+@auth (rules: [ {allow: owner}]) {
+    id: ID!
+    name: String!
+    type: ContactType!
+    contact: String!
+    verified: Boolean
+    contact_preference_order: Int!
+}
+
+type EmergencyContact @model
+@auth (rules: [ {allow: owner}]) {
+    id: ID!
+    name: String!
+    relationship: String
+    contacts: [Contact!]! @connection(keyName: "Contacts")
+    notification_preference_order: Int!
+}
+
+
